@@ -10,7 +10,7 @@
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>STUDENT Younghoon Kim Website</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -69,17 +69,24 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>The Hello Quad project demonstrates a 3D graphics application that uses OpenGL to render a textured quad to the screen.
+            The goal of this project was to render a basic animated quad by setting up an OpenGL project that responds
+            to mouse movement through dynamic shader effects.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li>Developed classes to manage OpenGL resources such as Textures, VertexBuffers, IndexBuffers, and VertexArrays.</li>
+            <li>Developed Vertex and fragment shaders to render a quad mesh.</li>
+            <li>Updated the demo logic to animate the quad based on time and mouse position.</li>
+            <li>Created custom animations within the quad's shader code.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>RMy problem was that the RGB color gradient was not expressed properly, and the texture (image) was not output properly,
+            but was split into 4 pieces, and each square had a different piece of image overlapping. This problem occurred 
+            because I forgot an important variable in the VertexArray.cpp function, and I was able to fix it right away.
+            I tried to express visual effects and animation in a unique way, and this process deepened 
+            my understanding of shader programming during the OpenGL development process.</p>
     </div>
 
     <div class="portfolio-item-individual">
