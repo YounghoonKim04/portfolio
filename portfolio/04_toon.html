@@ -69,17 +69,26 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>The D04ToonShading project was an assignment for the CS250 Computer Graphics class at Digipen,
+            building a toon shading framework that augmented custom_range_toon.frag, uniform_range_toon.frag,
+            and gradient_texture_toon.frag with adaptive anti-aliasing and linear fog effects.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li>Implemented create_trefoil in Mesh.cpp.</li>
+            <li>toon.vert: Computes model→view→projection transformation, passes view space normals
+                via a 3x3 normal matrix, and passes view position for fog effects.</li>
+            <li>Implemented three files: 01_custom_range_toon.frag, 02_uniform_range_toon.frag,
+                03_gradient_texture_toon.frag.</li>
+            <li>Anti-aliasing: Adaptively smoothed diffuse bands and specular edges using fwidth() and smoothstep().</li>
+            <li>Linear Fog: Uniformly applied view-space depth blending to all three Toon modes to achieve atmospheric depth cuing.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>The biggest issue I encountered while working on the project was that anti-aliasing was not applied properly.
+            This was fixed by adding conditionals to each of the three frags. The challenge for this project was to balance sharp,
+            stylish bands with smooth visual transitions. This challenge helped me gain a deeper understanding of model space and
+            view space by accurately computing and propagating normal matrices.</p>
     </div>
 
     <div class="portfolio-item-individual">
