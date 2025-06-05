@@ -69,17 +69,28 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>The CS250 HW - Shadow Mapping project was an assignment for the CS250 Computer Graphics II class at DigiPen.
+            The goal was to implement shadow mapping using a perspective light camera, construct depth and RGBA8 textures,
+            manage render targets via framebuffers, and apply shadow logic through shaders. The demo allows real-time
+            exploration and tweaking through ImGui and visualizes both the light's frustum and the resulting shadow map,
+            including exponential fog and gamma correction.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li>Added depth and RGBA8 texture generation functions to support shadow mapping and framebuffer color attachments.</li>
+            <li>Implemented view and world transform matrix functions for accurate camera positioning and transformation.</li>
+            <li>Created a flexible FrameBuffer class that supports optional color and depth attachments with dynamic resolution.</li>
+            <li>Rendered scene depth from the light's view and applied projected shadows using textureProj in the main render pass.</li>
+            <li>Wrote vertex and fragment shaders to compute shadow space positions, apply lighting, gamma correction, and exponential fog.</li>
+            <li>Exposed light field of view, depth format, shadow resolution, and other parameters through real-time GUI controls.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>The most challenging part of this project was dealing with shadows behind the light source. It was important to
+            properly handle the shadow space w value and the depth comparison condition in the textureProj() function while
+            implementing the DoShadowBehindLight function. It was also a challenge to control the **Exponential Fog** 
+            so that it was not applied too aggressively. This made me understand the concept of view space distance-based
+            attenuation and the relationship between shader coordinate space.</p>
     </div>
 
     <div class="portfolio-item-individual">
